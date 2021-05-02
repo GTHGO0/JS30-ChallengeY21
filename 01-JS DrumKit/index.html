@@ -64,11 +64,11 @@
         }
 
         function playSound(k) {
-            const audio = document.querySelector(`audio[data-key="${k.keyCode}"]`);
-            const key = document.querySelector(`div[data-key="${k.keyCode}"]`);
-            if (!audio) return;
+            const audio = document.querySelector(`audio[data-key="${k.keyCode}"]`);  // here all saounds are listed
+            const key = document.querySelector(`div[data-key="${k.keyCode}"]`);      // here all keys are listed
+            if (!audio) return;   // if a key is no listed in key.code stop audios
 
-            key.classList.add('playing');
+            key.classList.add('playing');    
             audio.currentTime = 0;
             audio.play();
         }
